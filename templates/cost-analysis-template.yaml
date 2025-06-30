@@ -1,0 +1,93 @@
+# Cost Analysis Template for Telco TCO Builder
+# This template defines the structure for cost analysis reports
+
+metadata:
+  template_version: "1.0.0"
+  description: "Standard cost analysis template for telco deployments"
+  created_by: "GenAI Telco TCO Builder"
+
+# Report structure template
+report_structure:
+  executive_summary:
+    - deployment_overview
+    - cost_summary
+    - key_recommendations
+    - business_impact
+  
+  detailed_analysis:
+    - deployment_configuration
+    - cost_breakdown
+    - service_analysis
+    - optimization_opportunities
+  
+  appendices:
+    - assumptions
+    - exclusions
+    - methodology
+    - glossary
+
+# Cost categories and their typical percentages
+cost_categories:
+  compute:
+    description: "EC2 instances, EKS clusters"
+    typical_percentage: "50-70%"
+    optimization_potential: "High"
+  
+  storage:
+    description: "EBS, EFS, S3 storage costs"
+    typical_percentage: "10-20%"
+    optimization_potential: "Medium"
+  
+  network:
+    description: "Bandwidth, load balancers"
+    typical_percentage: "5-15%"
+    optimization_potential: "Low"
+  
+  data_transfer:
+    description: "Inter-region, internet data transfer"
+    typical_percentage: "10-30%"
+    optimization_potential: "Very High"
+
+# Standard assumptions for telco deployments
+standard_assumptions:
+  - "ON DEMAND pricing model used"
+  - "No Reserved Instance discounts applied"
+  - "Standard support tier assumed"
+  - "24/7 operation assumed"
+  - "No disaster recovery costs included"
+  - "Standard AWS service limits assumed"
+
+# Common exclusions
+standard_exclusions:
+  - "Third-party software licensing"
+  - "Professional services costs"
+  - "Training and certification"
+  - "Compliance and auditing"
+  - "Development and testing environments"
+  - "Disaster recovery infrastructure"
+
+# Optimization recommendations by category
+optimization_recommendations:
+  compute:
+    - "Consider Reserved Instances for predictable workloads"
+    - "Implement auto-scaling for variable workloads"
+    - "Right-size instances based on actual utilization"
+    - "Use Spot Instances for fault-tolerant workloads"
+  
+  storage:
+    - "Implement lifecycle policies for S3"
+    - "Use EFS Intelligent Tiering"
+    - "Optimize EBS volume types"
+    - "Enable EBS encryption for compliance"
+  
+  network:
+    - "Use AWS Direct Connect for high-volume transfers"
+    - "Implement CloudFront for content delivery"
+    - "Optimize data transfer patterns"
+    - "Consider AWS PrivateLink for service connectivity"
+  
+  data_transfer:
+    - "Minimize cross-region data transfer"
+    - "Use AWS Outposts for local processing"
+    - "Implement data compression"
+    - "Optimize application data flows"
