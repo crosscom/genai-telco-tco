@@ -1,0 +1,26 @@
+# 5G Core Network Deployment - AWS Region
+# Example configuration for region-based deployment
+
+user_plane: "region"
+region: "us-east-1"
+sites: 3
+eks_clusters: 2
+
+compute:
+  vcpu: 96
+  memory: 384
+  instance_types:
+    - "m6i.8xlarge"
+    - "c6i.8xlarge"
+
+storage:
+  ebs_storage: 1000  # GB
+  efs_storage: 500   # GB
+  s3_storage: 100    # GB
+
+network:
+  peak_bandwidth: 10.0      # Gbps
+  monthly_tonnage: 1000.0   # TB
+  traffic_split:
+    direct_connect_percent: 80.0
+    internet_gateway_percent: 20.0
